@@ -31,30 +31,24 @@ export default {
     };
   },
   created() {
-    axios
-      .get(
-        "https://firestore.googleapis.com/v1/projects/プロジェクトID/databases/(default)/documents/comments"
-      )
-      .then(response => {
-        this.posts = response.data.documents;
-      });
+    axios.get("/comments").then(response => {
+      this.posts = response.data.documents;
+    });
   },
   methods: {
     createComment() {
       axios
-        .post(
-          "https://firestore.googleapis.com/v1/projects/プロジェクトID/databases/(default)/documents/comments",
-          {
-            fields: {
-              name: {
-                stringValue: this.name
-              },
-              comment: {
-                stringValue: this.comment
-              }
+        .post("/comments", {
+          fields: {
+            name: {
+              stringValue: this.name
+            },
+            comment: {
+              stringValue: this.comment
             }
           }
-        )
+        })
+
         .catch(error => {
           console.log(error);
         });
