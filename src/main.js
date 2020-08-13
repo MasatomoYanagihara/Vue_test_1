@@ -2,12 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import axios from "axios";
+import LikeNumber from "./LikeNumber"; // LikeNumberコンポーネントをグローバル登録する為にimportする。
 
 Vue.config.productionTip = false;
 
-axios.defaults.baseURL =
-  "https://firestore.googleapis.com/v1/projects/プロジェクトID/databases/(default)/documents";
+Vue.component('LikeNumber', LikeNumber) // LikeNumberコンポーネントをグローバル登録。
 
 new Vue({
   router,
