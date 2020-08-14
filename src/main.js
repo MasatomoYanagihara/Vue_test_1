@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import LikeNumber from "./LikeNumber"; // LikeNumberコンポーネントをグローバル登録する為にimportする。
+import LikeNumber from "./components/LikeNumber"; // LikeNumberコンポーネントをグローバル登録する為にimportする。
 
 Vue.config.productionTip = false;
 

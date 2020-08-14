@@ -1,18 +1,25 @@
 <template>
   <div>
     <LikeHeader></LikeHeader>
-    <LikeNumber></LikeNumber>
+    <h2>{{ number }}</h2>
+    <!-- goodNumberプロップスを指定して、dataのnumberをv-bindしている。 -->
+    <LikeNumber :goodNumber="number"></LikeNumber> 
   </div>
 </template>
 
 <script>
-import LikeHeader from "./LikeHeader"; // LikeHeaderコンポーネントをローカル登録する為にimportする。
+import LikeHeader from "./components/LikeHeader"; // LikeHeaderコンポーネントをローカル登録する為にimportする。
 
 export default {
+  data() {
+    return {
+      number: 10
+    };
+  },
   components: {
     /* 
     LikeHeaderコンポーネントをローカル登録。
-    LikeHeader: LikeHeader;だがES6ではキーとバリューが同じなら省略して書ける。
+    LikeHeader: LikeHeader;をES6ではキーとバリューが同じなら省略して書いてもよい。
     */
     LikeHeader
   }
