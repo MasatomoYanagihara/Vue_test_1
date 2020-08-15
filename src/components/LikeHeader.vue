@@ -1,3 +1,6 @@
 <template>
-  <h1>いいね</h1>
+  <div>
+    <!-- slotタグ、親からHTMLごと受け取る。 -->
+    <slot></slot>
+  </div>
 </template>

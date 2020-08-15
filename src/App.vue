@@ -1,9 +1,15 @@
 <template>
   <div>
-    <LikeHeader></LikeHeader>
-    <h2>{{ number }}</h2>
-    <!-- goodNumberプロップスを指定して、dataのnumberをv-bindしている。 -->
-    <LikeNumber :goodNumber="number"></LikeNumber> 
+    <LikeHeader>
+      <!-- 子へslotで送る。 -->
+      <h1>トータルのいいね数</h1>
+      <h2>{{ number }}</h2>
+    </LikeHeader>
+
+    <!-- 
+      子コンポーネントのgoodNumberプロップスを指定して、dataのnumberをv-bindしている。 属性名はケバブケースgood-numberと書く。
+    -->
+    <LikeNumber :good-number="number"></LikeNumber>
   </div>
 </template>
 
