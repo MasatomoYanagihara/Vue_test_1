@@ -11,5 +11,8 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {},
- 
+  /* 算出プロパティ的なもの */
+  getters: {
+    doubleCount: state => state.count * 2
+  }
 });

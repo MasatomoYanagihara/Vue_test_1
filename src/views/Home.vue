@@ -3,7 +3,7 @@
     <!-- フィルターを適用している。パイプ|を使用する。 -->
     <h2>{{ title | upperCase }}</h2>
     <h3>{{ subtitle | lowerCase }}</h3>
-    <p>Vuex({{ count }})</p>
+    <p>Vuex({{ doubleCount }})</p>
 
   </div>
 </template>
@@ -18,9 +18,9 @@ export default {
     };
   },
   computed: {
-    count() {
-      /* Vuexのcountを取ってきている。 */
-      return this.$store.state.count
+    doubleCount() {
+      /* Vuexのgetterをとってきている。 */
+      return this.$store.getters.doubleCount
     }
   },
   filters: {
