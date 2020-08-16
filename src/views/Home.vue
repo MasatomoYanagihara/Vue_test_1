@@ -1,14 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <!-- upperCaseフィルターを適用している。 -->
+    <h2>{{ title | upperCase }}</h2>
+    <h3>{{ subtitle | upperCase }}</h3>
+
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Home",
-  components: {
-  }
+  data() {
+    return {
+      title: "Welocome to Tokyo",
+      subtitle: "Tokyo is great city"
+    };
+  },
+  components: {}
 };
 </script>

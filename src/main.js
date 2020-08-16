@@ -6,7 +6,13 @@ import LikeNumber from "./components/LikeNumber"; // LikeNumberコンポーネ�
 
 Vue.config.productionTip = false;
 
-Vue.component('LikeNumber', LikeNumber) // LikeNumberコンポーネントをグローバル登録。
+/* LikeNumberコンポーネントをグローバル登録。 */
+Vue.component("LikeNumber", LikeNumber);
+
+/* 文字列を大文字にするフィルターupperCaseを定義。 */
+Vue.filter("upperCase", function(value) {
+  return value.toUpperCase();
+});
 
 new Vue({
   router,
