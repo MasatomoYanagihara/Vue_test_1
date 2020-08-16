@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <!-- upperCaseフィルターを適用している。 -->
+    <!-- フィルターを適用している。パイプ|を使用する。 -->
     <h2>{{ title | upperCase }}</h2>
-    <h3>{{ subtitle | upperCase }}</h3>
+    <h3>{{ subtitle | lowerCase }}</h3>
 
   </div>
 </template>
@@ -16,6 +16,12 @@ export default {
       subtitle: "Tokyo is great city"
     };
   },
-  components: {}
+  filters: {
+    /* lowerCaseフィルターをローカルで定義。 */
+    lowerCase(value) {
+      return value.toLowerCase();
+    }
+
+  }
 };
 </script>

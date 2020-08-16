@@ -9,7 +9,7 @@ Vue.config.productionTip = false;
 /* LikeNumberコンポーネントをグローバル登録。 */
 Vue.component("LikeNumber", LikeNumber);
 
-/* 文字列を大文字にするフィルターupperCaseを定義。 */
+/* 文字列を大文字にするフィルターupperCaseをグローバル登録。 */
 Vue.filter("upperCase", function(value) {
   return value.toUpperCase();
 });
