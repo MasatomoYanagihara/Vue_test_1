@@ -4,8 +4,12 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  /* データを入れるとこ */
+  state: {
+    count: 2
+  },
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {},
+ 
 });
