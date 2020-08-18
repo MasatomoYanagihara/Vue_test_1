@@ -4,11 +4,12 @@
     <h2>{{ title | upperCase }}</h2>
     <h3>{{ subtitle | lowerCase }}</h3>
     <p>Vuex({{ doubleCount }})</p>
-
+    <p>Vuex({{ tripleCount }})</p>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "Home",
   data() {
@@ -20,7 +21,10 @@ export default {
   computed: {
     doubleCount() {
       /* Vuexのgetterをとってきている。 */
-      return this.$store.getters.doubleCount
+      return this.$store.getters.doubleCount;
+    },
+    tripleCount() {
+      return this.$store.getters.tripleCount;
     }
   },
   filters: {
@@ -28,7 +32,6 @@ export default {
     lowerCase(value) {
       return value.toLowerCase();
     }
-
   }
 };
 </script>
