@@ -1,15 +1,28 @@
 <template>
   <div>
-    <h1>Shopです</h1>
+    <h2 class="ten">店舗一覧</h2>
+    <div class="test">
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import Card from "../components/Card.vue";
 
-}
+export default {
+  name: "Shop",
+  components: {
+    Card,
+  },
+};
 </script>
 
 <style>
-
+.test {
+  display: flex;
+}
 </style>

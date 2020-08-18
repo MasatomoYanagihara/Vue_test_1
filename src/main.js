@@ -3,6 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import LikeNumber from "./components/LikeNumber"; // LikeNumberコンポーネントをグローバル登録する為にimportする。
+import vuetify from "./plugins/vuetify";
+import axios from 'axios'
+
 
 Vue.config.productionTip = false;
 
@@ -17,5 +20,7 @@ Vue.filter("upperCase", function(value) {
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  vuetify,
+  axios,
+  render: h => h(App)
 }).$mount("#app");
