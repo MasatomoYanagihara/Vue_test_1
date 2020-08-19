@@ -7,7 +7,7 @@
     ></v-img>
 
     <!-- 店名 -->
-    <v-card-title>{{ post.shopName }}</v-card-title>
+    <v-card-title>{{ post.shopName.stringValue }}</v-card-title>
 
     <!-- 水平線 -->
     <v-divider class="mx-4"></v-divider>
@@ -17,11 +17,14 @@
 
       <!-- ジャンル -->
       <div class="my-4 subtitle-1">
-        {{ post.shopGanre }}
+        {{ post.shopGanre.stringValue }}
       </div>
 
       <!-- 説明文 -->
-      <div>営業時間 {{ post.openTime }} 〜 {{ post.closeTime }}</div>
+      <div>
+        営業時間 {{ post.openTime.stringValue }} 〜
+        {{ post.closeTime.stringValue }}
+      </div>
     </v-card-text>
   </v-card>
 </template>
