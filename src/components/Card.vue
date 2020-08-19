@@ -7,7 +7,7 @@
     ></v-img>
 
     <!-- 店名 -->
-    <v-card-title>{{ shopDetail.name }}</v-card-title>
+    <v-card-title>{{ post.shopName }}</v-card-title>
 
     <!-- 水平線 -->
     <v-divider class="mx-4"></v-divider>
@@ -17,16 +17,11 @@
 
       <!-- ジャンル -->
       <div class="my-4 subtitle-1">
-        {{ shopDetail.ganre }}
+        {{ post.shopGanre }}
       </div>
 
       <!-- 説明文 -->
-      <div>
-        {{ shopDetail.explanation }}
-      </div>
-      <div>
-        営業時間 {{ shopDetail.openTime }} 〜 {{ shopDetail.closeTime }}
-      </div>
+      <div>営業時間 {{ post.openTime }} 〜 {{ post.closeTime }}</div>
     </v-card-text>
   </v-card>
 </template>
@@ -35,15 +30,6 @@
 // import axios from 'axios';
 
 export default {
-  data: () => ({
-    posts: [],
-    shopDetail: {
-      name: "店名",
-      ganre: "ジャンル",
-      explanation: "説明文",
-      openTime: "11:00",
-      closeTime: "22:00",
-    },
-  }),
+  props: ["post"],
 };
 </script>

@@ -36,7 +36,7 @@
     </v-navigation-drawer>
 
     <!-- ヘッダー -->
-    <v-app-bar app color="indigo" dark>
+    <v-app-bar app color="orange" dark flat>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
@@ -46,7 +46,7 @@
     </v-main>
 
     <!-- フッター -->
-    <v-footer color="indigo" app>
+    <v-footer color="orange" app>
       <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
