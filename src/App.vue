@@ -3,64 +3,103 @@
     <!-- サイドナビゲーションメニュー -->
     <v-navigation-drawer v-model="drawer" app>
       <v-list dense>
-        <!-- Home -->
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <v-list-item-title style="padding-left: 12px;">MENU</v-list-item-title>
 
-        <!-- Store -->
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-store</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Store</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <!-- ホーム -->
+        <router-link to="/">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>ホーム</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
 
-        <!-- Contact -->
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-email</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <!-- お店を探す -->
+        <router-link to="/shop">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-store</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>お店を探す</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
+
+        <!-- よくある質問 -->
+        <router-link to="/question">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-email</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>よくある質問</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
+
+        <!-- 運営会社 -->
+        <router-link to="/company">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-email</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>運営会社</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
+
+        <!-- ログイン -->
+        <router-link to="/login">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-email</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>ログイン</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
       </v-list>
     </v-navigation-drawer>
 
     <!-- ヘッダー -->
-    <v-app-bar app color="orange" dark flat>
+    <v-app-bar app color="amber lighten-2" dark flat>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>BOPS</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
-      <Shop></Shop>
+      <router-view></router-view>
     </v-main>
 
     <!-- フッター -->
-    <v-footer color="orange" app>
+    <!-- <v-footer color="amber lighten-2" app>
       <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    </v-footer>-->
+    <BottomNav></BottomNav>
   </v-app>
 </template>
 
 <script>
-import Shop from "./views/Shop.vue";
+import BottomNav from "@/components/BottomNav.vue";
 
 export default {
   data: () => ({
-    drawer: false, // サイドナビゲーションメニュートグル
+    drawer: false // サイドナビゲーションメニュートグル
   }),
   components: {
-    Shop,
-  },
+    BottomNav
+  }
 };
 </script>
+
+<style lang="scss">
+a {
+  text-decoration: none;
+}
+</style>

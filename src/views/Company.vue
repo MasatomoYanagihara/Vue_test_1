@@ -1,13 +1,11 @@
 <template>
   <div>
-    <h1>ホーム画面</h1>
+    <h1>運営会社</h1>
   </div>
 </template>
 
 <script>
-
 export default {
-  components: {
-  }
+  components: {}
 };
 </script>
