@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>運営会社</h1>
+    <h2>運営会社</h2>
   </div>
 </template>
 

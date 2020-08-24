@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ホーム画面</h1>
+    <h2>ホーム画面</h2>
   </div>
 </template>
 

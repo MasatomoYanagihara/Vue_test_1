@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="ten">店舗一覧</h2>
+    <h2>店舗一覧</h2>
 
     <!-- <Card v-for="post in posts" :key="post.id" :post="post.fields" /> -->
 
@@ -28,13 +28,17 @@ export default {
     Card
   },
   created() {
-    axios
-      .get(
-        "https://firestore.googleapis.com/v1/projects/vuejs-http-246d7/databases/(default)/documents/shop/"
-      )
-      .then(response => {
-        this.posts = response.data.documents;
-      });
+    if (this.$store.state.shopData === false) {
+      axios
+        .get(
+          "https://firestore.googleapis.com/v1/projects/プロジェクトID/databases/(default)/documents/shop/"
+        )
+        .then(response => {
+          this.posts = response.data.documents;
+          // this.$store.commit("shopDataRoaded");
+          console.log("Shopデータgetリクエスト");
+        });
+    }
   }
 };
 </script>

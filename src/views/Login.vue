@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ログイン画面</h1>
+    <h2>ログイン画面</h2>
   </div>
 </template>
 

@@ -33,7 +33,7 @@
         <router-link to="/question">
           <v-list-item link>
             <v-list-item-action>
-              <v-icon>mdi-email</v-icon>
+              <v-icon>mdi-help-circle-outline</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>よくある質問</v-list-item-title>
@@ -45,7 +45,7 @@
         <router-link to="/company">
           <v-list-item link>
             <v-list-item-action>
-              <v-icon>mdi-email</v-icon>
+              <v-icon>mdi-office-building</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>運営会社</v-list-item-title>
@@ -57,7 +57,7 @@
         <router-link to="/login">
           <v-list-item link>
             <v-list-item-action>
-              <v-icon>mdi-email</v-icon>
+              <v-icon>mdi-login-variant</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>ログイン</v-list-item-title>
@@ -68,7 +68,7 @@
     </v-navigation-drawer>
 
     <!-- ヘッダー -->
-    <v-app-bar app color="amber lighten-2" dark flat>
+    <v-app-bar app color="gray lighten-4" flat>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>BOPS</v-toolbar-title>
     </v-app-bar>
@@ -76,12 +76,12 @@
     <v-main>
       <router-view></router-view>
     </v-main>
+    <BottomNav></BottomNav>
 
     <!-- フッター -->
-    <!-- <v-footer color="amber lighten-2" app>
+    <!-- <v-footer color="gray lighten-4" app>
       <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>-->
-    <BottomNav></BottomNav>
   </v-app>
 </template>
 
@@ -101,5 +101,9 @@ export default {
 <style lang="scss">
 a {
   text-decoration: none;
+}
+h2 {
+  text-align: center;
+  margin-top: 28px;
 }
 </style>
