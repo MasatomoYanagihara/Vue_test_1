@@ -1,10 +1,12 @@
 <template>
   <!-- xsサイズのみ表示する -->
   <v-bottom-navigation :value="activeBtn" color="gray lighten-4" app class="d-flex d-sm-none pt-3">
-    <v-btn>
-      <span>ホーム</span>
-      <v-icon>mdi-home</v-icon>
-    </v-btn>
+    <router-link to="/">
+      <v-btn>
+        <span>ホーム</span>
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+    </router-link>
 
     <v-btn>
       <span>注文</span>

@@ -33,6 +33,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "login" */ "@/views/Login.vue"),
   },
+  {
+    path: "/wasyoku",
+    name: "Wasyoku",
+    component: () =>
+      import(/* webpackChunkName: "wasyoku" */ "@/views/Wasyoku.vue"),
+  },
+  
 ];
 
 const router = new VueRouter({

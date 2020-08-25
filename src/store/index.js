@@ -6,7 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   /* データを入れるとこ */
   state: {
-    shopData: false,
+    shopData: [],
+    getShopData: false
   },
   /* stateを変更する場合はここでのみする。 */
   mutations: {
