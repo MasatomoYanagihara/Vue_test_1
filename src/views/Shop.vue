@@ -1,6 +1,12 @@
 <template>
   <div>
-    <h2>店舗一覧</h2>
+    <div class="wrapper-1">
+      <h2>店舗一覧</h2>
+      <div class="select-box">
+        <v-select :items="areas" label="エリアを選択" outlined color="rgb(200, 200, 200)" dense></v-select>
+      </div>
+    </div>
+
     <div class="select-box">
       <v-select
         :items="items"
@@ -32,6 +38,7 @@ export default {
     return {
       posts: [],
       justify: "center",
+      areas: ["五反田", "目黒", "白金", "品川", "田町", "浜松町"],
       items: ["和食", "中華", "イタリアン", "フレンチ"],
       selectGanre: ""
     };
@@ -43,12 +50,13 @@ export default {
     if (this.$store.state.getShopData === false) {
       axios
         .get(
-          "https://firestore.googleapis.com/v1/projects//databases/(default)/documents/shop/"
+          "https://firestore.googleapis.com/v1/projects/vuejs-http-246d7/databases/(default)/documents/shop/"
         )
         .then(response => {
           // this.posts = response.data.documents;
-          this.$store.state.shopData = response.data.documents
+          this.$store.state.shopData = response.data.documents;
           this.$store.state.getShopData = true;
+          console.log(response.data.documents);
           console.log("Shop data get request.");
         });
     }
@@ -60,7 +68,7 @@ export default {
 h2 {
   text-align: center;
   margin-top: 8%;
-  margin-bottom: 2%;
+  margin-bottom: 6%;
 }
 .select-box {
   margin: 0 8% 0 8%;

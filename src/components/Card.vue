@@ -1,9 +1,10 @@
 <template>
   <div>
     <!-- カードコンポーネント -->
+    <router-link to="/shop/shopdetaile">
       <v-col cols="12">
         <v-card class="mx-auto outline" max-width="320px" height="440px">
-          <v-img height="240" src="https://cdn.vuetifyjs.com/images/cards/cooking.png"></v-img>
+          <v-img height="240" src="@/assets/shop_1.jpg"></v-img>
 
           <!-- 店名 -->
           <v-card-title>{{ post.shopName.stringValue }}</v-card-title>
@@ -15,12 +16,12 @@
             <!-- ジャンル -->
             <div class="my-4 subtitle-1">{{ post.shopGanre.stringValue }}</div>
             <!-- 説明文 -->
-              営業時間 {{ post.openTime.stringValue }} 〜
-              {{ post.closeTime.stringValue }}
+            営業時間 {{ post.openTime.stringValue }} 〜
+            {{ post.closeTime.stringValue }}
           </v-card-text>
-
         </v-card>
       </v-col>
+    </router-link>
   </div>
 </template>
 

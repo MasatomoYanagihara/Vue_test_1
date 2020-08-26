@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>和食画面</h2>
+    <h2>オーダー画面</h2>
   </div>
 </template>
 

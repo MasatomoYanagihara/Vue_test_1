@@ -1,6 +1,11 @@
 <template>
   <!-- xsサイズのみ表示する -->
-  <v-bottom-navigation :value="activeBtn" color="gray lighten-4" app class="d-flex d-sm-none pt-3">
+  <v-bottom-navigation
+    :value="activeBtn"
+    color="orange lighten-1"
+    app
+    class="d-flex d-sm-none pt-3"
+  >
     <router-link to="/">
       <v-btn>
         <span>ホーム</span>

@@ -92,7 +92,8 @@
     </v-navigation-drawer>
 
     <!-- ヘッダー -->
-    <v-app-bar app color="gray lighten-4" flat>
+    <v-app-bar app color="orange lighten-2
+" flat>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="header_title">BOPS Meal.</v-toolbar-title>
     </v-app-bar>
@@ -103,9 +104,9 @@
     <BottomNav></BottomNav>
 
     <!-- フッター -->
-    <!-- <v-footer color="gray lighten-4" app>
+    <v-footer color="orange lighten-2" app>
       <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>-->
+    </v-footer>
   </v-app>
 </template>
 
