@@ -104,9 +104,9 @@
     <BottomNav></BottomNav>
 
     <!-- フッター -->
-    <v-footer color="orange lighten-2" app>
+    <!-- <v-footer color="orange lighten-2" app>
       <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 

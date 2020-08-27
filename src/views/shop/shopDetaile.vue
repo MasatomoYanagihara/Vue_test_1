@@ -18,6 +18,14 @@
         </p>
       </div>
     </div>
+    <!-- .section1  -->
+    <div class="section2">
+      <h2>料理</h2>
+      <GridImg></GridImg>
+    </div>
+    <!-- .section2 -->
+
+    <!-- 注文するボタン -->
     <router-link to="/Order">
       <div class="order-button">
         <v-btn rounded color="orange lighten-1" class="text-h6">注文する</v-btn>
@@ -27,9 +35,14 @@
 </template>
 
 <script>
+import GridImg from "@/components/GridImg.vue";
+
 export default {
   data() {
     return {};
+  },
+  components: {
+    GridImg
   }
 };
 </script>
@@ -47,6 +60,10 @@ h3 {
 .section1 {
   margin: 0 4%;
   border-bottom: 1px solid gray;
+  h2 {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+  }
 }
 .order-button {
   margin-top: 10%;

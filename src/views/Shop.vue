@@ -39,7 +39,7 @@ export default {
       posts: [],
       justify: "center",
       areas: ["五反田", "目黒", "白金", "品川", "田町", "浜松町"],
-      items: ["和食", "中華", "イタリアン", "フレンチ"],
+      items: ["和食", "中華", "イタリアン", "フレンチ","居酒屋"],
       selectGanre: ""
     };
   },

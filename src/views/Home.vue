@@ -74,6 +74,7 @@
         <v-btn rounded color="orange lighten-1" class="text-h6">お店を探す</v-btn>
       </div>
     </router-link>
+
   </div>
 </template>
 
@@ -156,6 +157,7 @@ img {
 
 .serch-button {
   margin-top: 10%;
+  margin-bottom: 18%;
   padding-bottom: 10%;
   text-align: center;
 }
