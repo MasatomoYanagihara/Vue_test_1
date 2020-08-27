@@ -74,7 +74,6 @@
         <v-btn rounded color="orange lighten-1" class="text-h6">お店を探す</v-btn>
       </div>
     </router-link>
-
   </div>
 </template>
 
@@ -85,10 +84,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h2,
-h3 {
-  color: rgb(90, 90, 90);
-}
 img {
   width: 100%;
   max-width: 1100px;
@@ -157,8 +152,7 @@ img {
 
 .serch-button {
   margin-top: 10%;
-  margin-bottom: 18%;
-  padding-bottom: 10%;
+  margin-bottom: 12%;
   text-align: center;
 }
 </style>

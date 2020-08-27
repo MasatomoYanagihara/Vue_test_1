@@ -7,14 +7,10 @@ export default new Vuex.Store({
   /* データを入れるとこ */
   state: {
     shopData: [],
-    getShopData: false
+    getShopData: false,
   },
   /* stateを変更する場合はここでのみする。 */
-  mutations: {
-    shopDataRoaded() {
-      this.state.shopData = true;
-    },
-  },
+  mutations: {},
   /* 非同期処理を書くところ */
   actions: {},
   modules: {},

@@ -18,7 +18,7 @@
         </router-link>
 
         <!-- サービス紹介 -->
-        <router-link to="/">
+        <router-link to="/menu/shopmenu">
           <v-list-item link class="menu-item">
             <v-list-item-action>
               <v-icon>mdi-silverware-fork-knife</v-icon>
@@ -95,7 +95,9 @@
     <v-app-bar app color="orange lighten-2
 " flat>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="header_title">BOPS Meal.</v-toolbar-title>
+      <router-link to="/">
+        <v-toolbar-title class="header_title">BOPS Meal.</v-toolbar-title>
+      </router-link>
     </v-app-bar>
 
     <v-main>
@@ -106,7 +108,7 @@
     <!-- フッター -->
     <!-- <v-footer color="orange lighten-2" app>
       <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer> -->
+    </v-footer>-->
   </v-app>
 </template>
 
@@ -127,11 +129,13 @@ export default {
 a {
   text-decoration: none;
 }
-.header_title {
-  font-family: "Kaushan Script", cursive;
-}
+
 </style>
 <style style="scoped" lang="scss">
+.header_title {
+  font-family: "Kaushan Script", cursive;
+  color: black;
+}
 .menu-item {
   border-bottom: 1px solid rgb(200, 200, 200);
 }
@@ -139,5 +143,9 @@ a {
   margin-top: 8px;
   border-top: 1px solid rgb(200, 200, 200);
   border-bottom: 1px solid rgb(200, 200, 200);
+}
+h1,
+h2 {
+  color: rgb(90, 90, 90);
 }
 </style>

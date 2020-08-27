@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wrapper-1">
-      <h2>店舗一覧</h2>
+      <h1>SHOP</h1>
       <div class="select-box">
         <v-select :items="areas" label="エリアを選択" outlined color="rgb(200, 200, 200)" dense></v-select>
       </div>
@@ -39,7 +39,7 @@ export default {
       posts: [],
       justify: "center",
       areas: ["五反田", "目黒", "白金", "品川", "田町", "浜松町"],
-      items: ["和食", "中華", "イタリアン", "フレンチ","居酒屋"],
+      items: ["和食", "中華", "イタリアン", "フレンチ", "居酒屋"],
       selectGanre: ""
     };
   },
@@ -47,28 +47,26 @@ export default {
     Card
   },
   created() {
-    if (this.$store.state.getShopData === false) {
-      axios
-        .get(
-          "https://firestore.googleapis.com/v1/projects/vuejs-http-246d7/databases/(default)/documents/shop/"
-        )
-        .then(response => {
-          // this.posts = response.data.documents;
-          this.$store.state.shopData = response.data.documents;
-          this.$store.state.getShopData = true;
-          console.log(response.data.documents);
-          console.log("Shop data get request.");
-        });
-    }
+    axios
+      .get(
+        "https://firestore.googleapis.com/v1/projects/vuejs-http-246d7/databases/(default)/documents/shop/"
+      )
+      .then(response => {
+        // this.posts = response.data.documents;
+        this.$store.state.shopData = response.data.documents;
+        this.$store.state.getShopData = true;
+        console.log("ShopData get request.");
+      });
   }
 };
 </script>
 
 <style lang="scss" scoped>
-h2 {
+h1 {
   text-align: center;
   margin-top: 8%;
   margin-bottom: 6%;
+  font-family: "Kaushan Script", cursive;
 }
 .select-box {
   margin: 0 8% 0 8%;

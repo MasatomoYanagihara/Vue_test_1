@@ -4,8 +4,7 @@
     <router-link to="/shop/shopdetaile">
       <v-col cols="12">
         <v-card class="mx-auto outline" max-width="320px" height="440px">
-          <v-img height="240" src="@/assets/shop_1.jpg"></v-img>
-
+          <v-img height="240" src="@/assets/shop1.jpg" />
           <!-- 店名 -->
           <v-card-title>{{ post.shopName.stringValue }}</v-card-title>
 

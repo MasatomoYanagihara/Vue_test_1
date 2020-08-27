@@ -1,11 +1,5 @@
 <template>
   <div>
-    <h2>オーダー画面</h2>
+    <h2>注文画面</h2>
   </div>
 </template>
-
-<script>
-export default {
-  components: {}
-};
-</script>
